@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KeyboardService.View.MainPageView">
+  <Grid HorizontalOptions="FillAndExpand" Padding="0" ColumnSpacing="0"
+        x:Name="Grid" VerticalOptions="FillAndExpand" RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                 HorizontalOptions="FillAndExpand">
+      <Label Text="Keyboard service app" FontSize="40" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+    </StackLayout>
+    <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" Orientation="Vertical"
+                 HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+      <ListView WidthRequest="120" HorizontalOptions="StartAndExpand"
+                BackgroundColor="Blue">
+      </ListView>
+    </StackLayout>
+    <Grid Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"
+          BackgroundColor="Gray" x:Name="Content">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="600" />
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0" BackgroundColor="Red" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"></StackLayout>
+      <Entry Grid.Row="1" Grid.Column="0" FontSize="40"
+                              BackgroundColor="Fuchsia" Text="Editor that is hidden by keyboard" />
+    </Grid>
+  </Grid>
+</ContentPage>

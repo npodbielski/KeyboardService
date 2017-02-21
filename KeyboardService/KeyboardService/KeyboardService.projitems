@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b4356305-d98f-439b-aa19-2407778ed3a6</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GaspolOrder</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\ISoftwareKeyboardService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\KeyboardServiceBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
+    <!-- <Compile Include="$(MSBuildThisFileDirectory)View\Master\MasterPage.xaml.cs">    
+      <SubType>Code</SubType>
+      <DependentUpon>MasterPage.xaml</DependentUpon>
+    </Compile> -->
+    <Compile Include="$(MSBuildThisFileDirectory)View\MainPageView.xaml.cs">
+      <DependentUpon>MainPageView.xaml</DependentUpon>
+    </Compile>
+    <!-- <Compile Include="$(MSBuildThisFileDirectory)View\MainPageView.xaml.cs">
+      <DependentUpon>MainPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile> -->
+    <!-- <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Controls\MasterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource> -->
+    <!-- <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource> -->
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
