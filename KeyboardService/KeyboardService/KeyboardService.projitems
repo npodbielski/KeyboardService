@@ -13,7 +13,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\ISoftwareKeyboardService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\KeyboardServiceBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardServiceBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardEventHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />

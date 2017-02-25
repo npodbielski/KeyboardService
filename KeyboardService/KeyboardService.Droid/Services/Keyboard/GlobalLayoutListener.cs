@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Views.InputMethods;
@@ -14,7 +15,7 @@ namespace KeyboardService.Services.Keyboard
 
         private static void ObtainInputManager()
         {
-            _inputManager = (InputMethodManager)TinyIoCContainer.Current.Resolve<MainActivity>()
+            _inputManager = (InputMethodManager)TinyIoCContainer.Current.Resolve<Activity>()
                 .GetSystemService(Context.InputMethodService);
         }
 
@@ -32,11 +33,11 @@ namespace KeyboardService.Services.Keyboard
             }
             if (_inputManager.IsAcceptingText)
             {
-                _softwareKeyboardService.OnOnKeyboardShow(new SoftwareKeyboardEventArgs(true));
+                _softwareKeyboardService.InvokeKeyboardShow(new SoftwareKeyboardEventArgs(true));
             }
             else
             {
-                _softwareKeyboardService.OnOnKeyboardHide(new SoftwareKeyboardEventArgs(false));
+                _softwareKeyboardService.InvokeKeyboardHide(new SoftwareKeyboardEventArgs(false));
             }
         }
     }

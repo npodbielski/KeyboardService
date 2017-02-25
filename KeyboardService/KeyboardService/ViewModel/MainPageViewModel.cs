@@ -7,6 +7,7 @@ namespace KeyboardService.ViewModel
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
+        private string _event;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public MainPageViewModel()
@@ -16,14 +17,24 @@ namespace KeyboardService.ViewModel
             keyboardService.Show += _keyboardService_Show;
         }
 
-        private static void _keyboardService_Show(object sender, SoftwareKeyboardEventArgs args)
+        private void _keyboardService_Show(object sender, SoftwareKeyboardEventArgs args)
         {
-            
+            Event = "Show event handler invoked";
         }
 
-        private static void _keyboardService_Hide(object sender, SoftwareKeyboardEventArgs args)
+        private void _keyboardService_Hide(object sender, SoftwareKeyboardEventArgs args)
         {
-            
+            Event = "Hide event handler invoked";
+        }
+
+        public string Event
+        {
+            get { return _event; }
+            set
+            {
+                _event = value;
+                OnPropertyChanged();
+            }
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
