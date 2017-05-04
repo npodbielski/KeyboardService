@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\VisualElementExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\ISoftwareKeyboardService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardServiceBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Keyboard\SoftwareKeyboardEventHandler.cs" />

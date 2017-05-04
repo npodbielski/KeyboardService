@@ -17,6 +17,12 @@
                  HorizontalOptions="FillAndExpand">
       <Label Text="Keyboard service app" FontSize="40" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
     </StackLayout>
+    <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" Orientation="Vertical"
+                 HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+      <ListView WidthRequest="120" HorizontalOptions="StartAndExpand"
+                BackgroundColor="Blue">
+      </ListView>
+    </StackLayout>
     <Grid Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"
           BackgroundColor="Gray" x:Name="Content">
       <Grid.RowDefinitions>
@@ -28,7 +34,7 @@
         <Label Text="{Binding Event}" FontSize="40" />
       </StackLayout>
       <Entry Grid.Row="1" Grid.Column="0" FontSize="40"
-                              BackgroundColor="Gray" Text="Entry" />
+                              BackgroundColor="Fuchsia" Text="Editor that is hidden by keyboard" />
     </Grid>
   </Grid>
 </ContentPage>

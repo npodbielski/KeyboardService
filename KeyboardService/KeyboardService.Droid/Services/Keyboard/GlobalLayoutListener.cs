@@ -1,5 +1,4 @@
 ﻿using System;
-using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Views.InputMethods;
@@ -15,7 +14,7 @@ namespace KeyboardService.Services.Keyboard
 
         private static void ObtainInputManager()
         {
-            _inputManager = (InputMethodManager)TinyIoCContainer.Current.Resolve<Activity>()
+            _inputManager = (InputMethodManager)TinyIoCContainer.Current.Resolve<MainActivity>()
                 .GetSystemService(Context.InputMethodService);
         }
 

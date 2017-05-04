@@ -118,8 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\ScrollEditorRenderer.cs" />
+    <Compile Include="Renderers\ScrollEntryRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Keyboard\EditorsScrollingHelper.cs" />
     <Compile Include="Services\Keyboard\GlobalLayoutListener.cs" />
     <Compile Include="Services\Keyboard\SoftwareKeyboardService.cs" />
   </ItemGroup>

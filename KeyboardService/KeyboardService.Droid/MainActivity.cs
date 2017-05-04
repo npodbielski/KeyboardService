@@ -16,7 +16,7 @@ namespace KeyboardService
         protected sealed override void OnCreate(Bundle bundle)
         {
             TinyIoCContainer.Current.Register<ISoftwareKeyboardService, SoftwareKeyboardService>().AsSingleton();
-            TinyIoCContainer.Current.Register<Activity>(this);
+            TinyIoCContainer.Current.Register(this);
             Forms.Init(this, bundle, GetType().Assembly);
             base.OnCreate(bundle);
             LoadApplication(new App());

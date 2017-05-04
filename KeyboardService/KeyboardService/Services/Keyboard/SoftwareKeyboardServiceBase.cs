@@ -8,6 +8,7 @@ namespace KeyboardService.Services.Keyboard
 
         public void InvokeKeyboardHide(SoftwareKeyboardEventArgs args)
         {
+            OnHide();
             var handler = Hide;
             handler?.Invoke(this, args);
         }
@@ -16,6 +17,10 @@ namespace KeyboardService.Services.Keyboard
         {
             var handler = Show;
             handler?.Invoke(this, args);
+        }
+
+        protected virtual void OnHide()
+        {
         }
     }
 }
