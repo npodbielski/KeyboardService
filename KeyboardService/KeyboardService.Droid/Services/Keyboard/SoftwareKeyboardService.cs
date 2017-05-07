@@ -42,13 +42,5 @@ namespace KeyboardService.Services.Keyboard
                 _activity.Window.DecorView.ViewTreeObserver.AddOnGlobalLayoutListener(_globalLayoutListener);
             }
         }
-
-        protected override void OnHide()
-        {
-            if (Application.Current.MainPage != null)
-            {
-                Application.Current.MainPage.SetTranslation(0);
-            }
-        }
     }
 }

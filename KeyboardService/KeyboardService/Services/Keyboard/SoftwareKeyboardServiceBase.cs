@@ -1,3 +1,6 @@
+using GaspolOrder.Extensions;
+using Xamarin.Forms;
+
 namespace KeyboardService.Services.Keyboard
 {
     public abstract class SoftwareKeyboardServiceBase : ISoftwareKeyboardService
@@ -19,8 +22,12 @@ namespace KeyboardService.Services.Keyboard
             handler?.Invoke(this, args);
         }
 
-        protected virtual void OnHide()
+        private void OnHide()
         {
+            if (Application.Current.MainPage != null)
+            {
+                Application.Current.MainPage.SetTranslation(0);
+            }
         }
     }
 }
